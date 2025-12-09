@@ -7,8 +7,8 @@ import { nanoid } from 'nanoid'
 type StemType = 'vocals' | 'drums' | 'bass' | 'guitar' | 'piano' | 'other'
 
 const STEM_CONFIG: Record<StemType, { label: string; color: string; icon: string; keywords: string[] }> = {
-  vocals: { label: 'Vocals', color: '#f472b6', icon: '🎤', keywords: ['vocal', 'vox', 'voice', 'sing'] },
-  drums: { label: 'Drums', color: '#38bdf8', icon: '🥁', keywords: ['drum', 'percussion', 'beat'] },
+  vocals: { label: 'Vocals', color: '#f472b6', icon: '🎤', keywords: ['vocals', 'vocal', 'vox', 'voice', 'sing'] },
+  drums: { label: 'Drums', color: '#38bdf8', icon: '🥁', keywords: ['drums', 'drum', 'percussion', 'beat'] },
   bass: { label: 'Bass', color: '#a3e635', icon: '🎸', keywords: ['bass'] },
   guitar: { label: 'Guitar', color: '#fb923c', icon: '🎸', keywords: ['guitar', 'gtr'] },
   piano: { label: 'Piano', color: '#facc15', icon: '🎹', keywords: ['piano', 'keys', 'keyboard'] },
@@ -191,9 +191,9 @@ export default function Home() {
       setProgress(100)
       const url = `${window.location.origin}/s/${trackId}`
       setShareUrl(url)
-    } catch (error) {
+    } catch (error: any) {
       console.error('Upload error:', error)
-      alert('Upload failed. Please check your Supabase configuration.')
+      alert(`Upload failed: ${error?.message || JSON.stringify(error)}`)
     } finally {
       setUploading(false)
     }
