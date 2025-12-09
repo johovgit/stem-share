@@ -78,7 +78,7 @@ create policy "Anyone can insert tracks"
 
 1. Click this button: 
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/YOUR_USERNAME/stem-share&env=NEXT_PUBLIC_SUPABASE_URL,NEXT_PUBLIC_SUPABASE_ANON_KEY)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/johovgit/stem-share&env=NEXT_PUBLIC_SUPABASE_URL,NEXT_PUBLIC_SUPABASE_ANON_KEY)
 
 > **Note:** If you're setting this up manually, first push this code to a GitHub repository, then use the Vercel button or import the repo directly on vercel.com
 
@@ -133,7 +133,7 @@ Need more? Supabase Pro is $25/month for 100GB storage.
 
 ```bash
 # Clone the repo
-git clone https://github.com/YOUR_USERNAME/stem-share
+git clone https://github.com/johovgit/stem-share
 cd stem-share
 
 # Install dependencies
